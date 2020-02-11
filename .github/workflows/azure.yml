@@ -26,4 +26,4 @@ jobs:
 
     - shell: bash
       run: |
-          curl --data-binary @test.zip -u ${{ env.AZURE_WEBAPP_NAME }}:${{ env.AZURE_WEBAPP_PUBLISHING_PWD}} https://${{ env.AZURE_WEBAPP_NAME }}.scm.${{ env.K8SE_CLUSTER_NAME }}.k4apps-example.io --resolve ${{ env.AZURE_WEBAPP_NAME }}.scm.${{ env.K8SE_CLUSTER_NAME }}.k4apps-example.io:443:${{ env.K8SE_CLUSTER_IP }} -v --insecure 
+          curl --data-binary @test.zip -u ${{ env.AZURE_WEBAPP_NAME }}:${{ env.AZURE_WEBAPP_PUBLISHING_PWD}} https://${{ env.AZURE_WEBAPP_NAME }}.scm.azurewebsites.net --resolve ${{ env.AZURE_WEBAPP_NAME }}.scm.${{ env.K8SE_CLUSTER_NAME }}.azurewebsites:443 -v --insecure 
