@@ -26,4 +26,4 @@ jobs:
 
     - shell: bash
       run: |
-          curl --data-binary @test.zip -u ${{ env.AZURE_WEBAPP_NAME }}:${{ env.AZURE_WEBAPP_PUBLISHING_PWD}} https://${{ env.AZURE_WEBAPP_NAME }}.scm.azurewebsites.net --resolve ${{ env.AZURE_WEBAPP_NAME }}.scm.${{ env.K8SE_CLUSTER_NAME }}.azurewebsites:443 -v --insecure 
+          curl --data-binary @test.zip -u $AZURE_WEBAPP_NAME:$AZURE_WEBAPP_PUBLISHING_PWD https://$AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST --resolve $AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST:443 -v --insecure
