@@ -25,5 +25,9 @@ jobs:
         args: zip -qq -r ./test.zip ./
 
     - shell: bash
+      env: # Or as an environment variable
+        AZURE_WEBAPP_PUBLISHING_PWD: ${{ secrets.AZURE_WEBAPP_PUBLISHING_PWD }}
+        AZURE_WEBAPP_NAME: ${{ secrets.AZURE_WEBAPP_NAME }}
+        AZURE_DEFAULT_HOST: ${{ secrets.AZURE_DEFAULT_HOST }}
       run: |
           curl --data-binary @test.zip -u $AZURE_WEBAPP_NAME:$AZURE_WEBAPP_PUBLISHING_PWD https://$AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST --resolve $AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST:443 -v --insecure
