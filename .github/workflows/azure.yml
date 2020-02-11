@@ -24,7 +24,7 @@ jobs:
     # deploy web app using Azure credentials
     - uses: montudor/action-zip@v0.1.0
       with:
-        args: zip -qq -r /home/runner/work/node-multiplayer-snake/node-multiplayer-snake/test.zip /home/runner/work/node-multiplayer-snake/node-multiplayer-snake/*
+        args: zip -qq -r /home/runner/work/node-multiplayer-snake/node-multiplayer-snake/test.zip .
 
     - shell: bash
       env: # Or as an environment variable
