@@ -32,4 +32,4 @@ jobs:
         AZURE_WEBAPP_NAME: ${{ secrets.AZURE_WEBAPP_NAME }}
         AZURE_DEFAULT_HOST: ${{ secrets.AZURE_DEFAULT_HOST }}
       run: |
-          cd /home/runner/work/node-multiplayer-snake/node-multiplayer-snake/ && curl --data-binary @test.zip -u $AZURE_WEBAPP_NAME:$AZURE_WEBAPP_PUBLISHING_PWD https://$AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST --resolve $AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST:443 -v --insecure
+        curl --data-binary @test.zip --insecure https://$AZURE_WEBAPP_NAME:$AZURE_WEBAPP_PUBLISHING_PWD@test1.scm.$AZURE_DEFAULT_HOST/api/zipdeploy  --resolve  $AZURE_WEBAPP_NAME.scm.$AZURE_DEFAULT_HOST:443 -v
