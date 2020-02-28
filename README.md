@@ -26,7 +26,7 @@ Open your web browser to `localhost:3000`
 ### Game Features
  - Quick join and play (no sign-ups)
  - Player settings
-   - Change colors
+   - Change colors.
    - Change names
  - Admin controls
    - Change game speed
