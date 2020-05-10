@@ -5,7 +5,7 @@
 
 A multiplayer snake game built on NodeJs, Express, socket.io, and JavaScript ES6.  No unnecessary libraries.
 
-Live demo [Here](https://node-multiplayer-snake.herokuapp.com/)
+Live demo [Here](https://node-multiplayer-snake.herokuapp.com/).
 
 ### Getting Started
 
